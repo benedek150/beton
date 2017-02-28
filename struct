@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+typedef struct {
+	char * name;
+	int age;
+}person;
+
+int main() {
+
+	person * myperson;
+	myperson = malloc(sizeof(person));
+	myperson->name = "Ben";
+	myperson->age = 23;
+
+	printf("Myperson is: %s and he is %d years old", myperson->name, myperson->age);
+
+
+
+
+	getchar();
+	free(myperson);
+	return 0;
+}
